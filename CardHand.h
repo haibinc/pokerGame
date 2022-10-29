@@ -12,9 +12,10 @@ class CardHand
 {
 private:
     std::vector<LightCard> cardHand;
-    void drawCard();
 public:
     CardHand();
+    void drawCard(const LightCard& card);
+    void print();
 };
 
 

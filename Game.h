@@ -7,6 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include "Card.h"
 #include "Deck.h"
+#include "CardHand.h"
 #include "Suit.h"
 #include "Rank.h"
 #include "suitEnum.h"

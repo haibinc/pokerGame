@@ -11,8 +11,8 @@ Deck::Deck()
     {
         for (int j = 0; j < COUNT_SUITS; ++j)
         {
-           deck[deck_Index] = LightCard(static_cast<Ranks>(i), static_cast<Suits>(j));
-           deck_Index++;
+            deck[deck_Index] = LightCard(static_cast<Ranks>(i), static_cast<Suits>(j));
+            deck_Index++;
         }
     }
 }
@@ -20,6 +20,18 @@ Deck::Deck()
 std::ostream& operator<<(std::ostream& out, const LightCard& card)
 {
     return out << card.toStringRank() << " of " << card.toStringSuit() << std::endl;
+}
+
+bool operator==(const LightCard& lhs, const LightCard& rhs)
+{
+    if(lhs.getEnumRank() == rhs.getEnumRank() && lhs.getEnumSuit() == rhs.getEnumSuit())
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 void Deck::printDeck()
@@ -58,7 +70,12 @@ bool Deck::empty()
     {
         if(deck[i] == LightCard(EmptyRank, EmptySuit))
         {
-
+            continue;
+        }
+        else
+        {
+            return false;
         }
     }
+    return true;
 }

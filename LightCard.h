@@ -18,6 +18,8 @@ public:
     LightCard(Ranks enumRank, Suits enumSuit);
     std::string toStringRank() const;
     std::string toStringSuit() const;
+    Ranks getEnumRank() const;
+    Suits getEnumSuit() const;
 };
 
 

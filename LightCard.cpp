@@ -65,3 +65,13 @@ std::string LightCard::toStringSuit() const
             return "Empty";
     }
 }
+
+Ranks LightCard::getEnumRank() const
+{
+    return enumRank;
+}
+
+Suits LightCard::getEnumSuit() const
+{
+    return enumSuit;
+}

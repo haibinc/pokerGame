@@ -6,13 +6,17 @@
 
 CardHand::CardHand()
 {
-
 }
 
-void CardHand::drawCard()
+void CardHand::drawCard(const LightCard& card)
 {
-    for (int i = 0; i < 5; ++i)
+    cardHand.push_back(card);
+}
+
+void CardHand::print()
+{
+    for (int i = 0; i < cardHand.size(); ++i)
     {
-//        cardHand.push_back()
+        std::cout << cardHand[i];
     }
 }

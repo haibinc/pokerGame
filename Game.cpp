@@ -18,7 +18,12 @@ void Game::run()
     Card card4(Jack, Diamonds, {100, 100});
     Deck deck;
     deck.shuffleDeck();
-    deck.dealCard();
+    CardHand ch;
+    for (int i = 0; i < 5; ++i)
+    {
+        ch.drawCard(deck.dealCard());
+    }
+    
 //    while(window.isOpen())
 //    {
 //        sf::Event event;

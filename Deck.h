@@ -25,7 +25,8 @@ public:
     void shuffleDeck();
     void printDeck();
     friend std::ostream& operator<<(std::ostream& out, const LightCard& card);
+    friend bool operator==(const LightCard& lhs, const LightCard& rhs);
 };
-
+std::ostream& operator<<(std::ostream& out, const LightCard& card);
 
 #endif //PLAYINGCARD_DECK_H
