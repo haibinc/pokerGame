@@ -3,3 +3,62 @@
 //
 
 #include "Deck.h"
+
+Deck::Deck()
+{
+    int deck_Index = 0;
+    for (int i = 0; i < COUNT_RANKS; ++i)
+    {
+        for (int j = 0; j < COUNT_SUITS; ++j)
+        {
+           deck[deck_Index] = LightCard(static_cast<Ranks>(i), static_cast<Suits>(j));
+           deck_Index++;
+        }
+    }
+}
+
+std::ostream& operator<<(std::ostream& out, const LightCard& card)
+{
+    return out << card.toStringRank() << " of " << card.toStringSuit() << std::endl;
+}
+
+void Deck::printDeck()
+{
+    for (int i = 0; i < deck_Size; ++i)
+    {
+        std::cout << deck[i];
+    }
+}
+
+void Deck::shuffleDeck()
+{
+    srand(time(0));
+    LightCard temp[52];
+    for (int i = 0; i < deck_Size; ++i)
+    {
+        int index = rand() % 52;
+        temp[index] = deck[index];
+        deck[index] = deck[i];
+        deck[i] = temp[index];
+    }
+}
+
+LightCard Deck::dealCard()
+{
+    LightCard temp[52];
+    temp[cardIndex] = deck[cardIndex];
+    deck[cardIndex] = LightCard(EmptyRank, EmptySuit);
+    cardIndex++;
+    return temp[cardIndex-1];
+}
+
+bool Deck::empty()
+{
+    for (int i = 0; i < deck_Size; ++i)
+    {
+        if(deck[i] == LightCard(EmptyRank, EmptySuit))
+        {
+
+        }
+    }
+}

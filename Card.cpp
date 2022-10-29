@@ -6,29 +6,48 @@
 
 Card::Card()
 {
+    init(Ace, Diamonds, cardPosition);
+}
+
+Card::Card(Ranks enumRank, Suits enumSuit, sf::Vector2f cardPosition)
+:Card(Rank(enumRank), Suit(enumSuit), cardPosition)
+{
+}
+
+Card::Card(const Rank& rank, const Suit& suit, sf::Vector2f cardPosition)
+{
+    init(rank, suit, cardPosition);
+}
+
+void Card::init(const Rank& rank, const Suit& suit, sf::Vector2f cardPosition)
+{
     cardBackGround.setSize(cardSize);
     cardBackGround.setFillColor(sf::Color::White);
-    cardBackGround.setPosition(cardPosition);
-    if(!font.loadFromFile("MontereyFLF-Bold.ttf"))
+    setPosition(cardPosition);
+    if (!font.loadFromFile("MontereyFLF-Bold.ttf")) {
+        throw ("yer");
+    }
+    if(suit.toString() == "Spades.png" || suit.toString() == "Clubs.png")
     {
-        throw("yer");
+        faceValue.setFillColor(sf::Color::Black);
+    }
+    else
+    {
+        faceValue.setFillColor(sf::Color::Red);
     }
     faceValue.setFont(font);
     faceValue.setCharacterSize(100);
-    faceValue.setFillColor(sf::Color::Red);
     faceValue.setStyle(sf::Text::Bold | sf::Text::Underlined);
-    faceValue.setPosition(getGlobalBounds().left + (getGlobalBounds().width/2 - 50), getGlobalBounds().top + (getGlobalBounds().height/2) - 50);
-    faceValue.setString("A");
-    texture.loadFromFile("jean_victor_balin_card_coeur.png");
+    faceValue.setPosition(getGlobalBounds().left + (getGlobalBounds().width / 2 - 50), getGlobalBounds().top + (getGlobalBounds().height / 2) - 50);
+    faceValue.setString(rank.toString());
+    texture.loadFromFile(suit.toString());
     suitTop.setTexture(texture);
-    suitTop.setScale(0.15, 0.15);
-    suitTop.setColor(sf::Color::Red);
+    suitTop.setScale(0.10, 0.10);
     suitTop.setPosition(getGlobalBounds().left, getGlobalBounds().top);
     suitBottom.setTexture(texture);
-    suitBottom.setScale(0.15, 0.15);
+    suitBottom.setScale(0.10, 0.10);
     suitBottom.rotate(180);
-    suitBottom.setColor(sf::Color::Red);
-    suitBottom.setPosition(getGlobalBounds().width - suitBottom.getScale().x, getGlobalBounds().height - suitBottom.getScale().y);
+    suitBottom.setPosition(getGlobalBounds().width, getGlobalBounds().height);
 }
 
 void Card::draw(sf::RenderTarget& window, sf::RenderStates states) const
@@ -49,3 +68,4 @@ sf::FloatRect Card::getGlobalBounds() const
 {
     return cardBackGround.getGlobalBounds();
 }
+

@@ -2,14 +2,21 @@
 // Created by Haibin Cao on 10/19/22.
 //
 
-#ifndef PLAYINGCARD_SUITS_H
-#define PLAYINGCARD_SUITS_H
+#ifndef PLAYINGCARD_SUIT_H
+#define PLAYINGCARD_SUIT_H
+#include "iostream"
+#include "suitEnum.h"
 
-
-class suits {
+class Suit {
 public:
-    enum Suits{ Spade, Heart, Club, Diamond};
+    Suit();
+    Suit(Suits enumSuit);
+    void setSuits(Suits enumSuit);
+    std::string toString() const;
+    Suits getSuits();
+private:
+    Suits enumSuit;
 };
 
 
-#endif //PLAYINGCARD_SUITS_H
+#endif //PLAYINGCARD_SUIT_H

@@ -12,27 +12,35 @@ Game::Game()
 
 void Game::run()
 {
-    Card card1;
-    while(window.isOpen())
-    {
-        sf::Event event;
-        while(window.pollEvent(event))
-        {
-            switch(event.type)
-            {
-                case sf::Event::Closed :
-                {
-                    window.close();
-                    break;
-                }
-            }
-        }
-
-        window.clear();
-        window.draw(card1);
-
-        card1.setPositionCard(sf::Vector2f{700, 700});
-        window.display();
-
-    }
+    Card card1(Queen, Clubs, {700, 700});
+    Card card2(Ace, Spades, {500, 300});
+    Card card3(King, Hearts, {1100,1100});
+    Card card4(Jack, Diamonds, {100, 100});
+    Deck deck;
+    deck.shuffleDeck();
+    deck.dealCard();
+//    while(window.isOpen())
+//    {
+//        sf::Event event;
+//        while(window.pollEvent(event))
+//        {
+//            switch(event.type)
+//            {
+//                case sf::Event::Closed :
+//                {
+//                    window.close();
+//                    break;
+//                }
+//            }
+//        }
+//
+//        window.clear();
+//        window.draw(card1);
+//        window.draw(card2);
+//        window.draw(card3);
+//        window.draw(card4);
+//
+//        window.display();
+//
+//    }
 }

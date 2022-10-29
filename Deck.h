@@ -4,10 +4,27 @@
 
 #ifndef PLAYINGCARD_DECK_H
 #define PLAYINGCARD_DECK_H
+#include <ostream>
+#include <iostream>
+#include <time.h>
+#include "LightCard.h"
+#include "suitEnum.h"
+#include "rankEnum.h"
 
-
-class Deck {
-
+class Deck
+{
+private:
+    const int deck_Size = 52;
+    int cardIndex = 0;
+public:
+    Deck();
+    LightCard deck[52];
+    LightCard dealCard();
+    LightCard getCardAt(int index);
+    bool empty();
+    void shuffleDeck();
+    void printDeck();
+    friend std::ostream& operator<<(std::ostream& out, const LightCard& card);
 };
 
 

@@ -67,6 +67,41 @@ build CMakeFiles/playingCard.dir/Game.cpp.o: CXX_COMPILER__playingCard_Debug /Us
   OBJECT_DIR = CMakeFiles/playingCard.dir
   OBJECT_FILE_DIR = CMakeFiles/playingCard.dir
 
+build CMakeFiles/playingCard.dir/Deck.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/Deck.cpp || cmake_object_order_depends_target_playingCard
+  DEP_FILE = CMakeFiles/playingCard.dir/Deck.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
+  INCLUDES = -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/playingCard.dir
+  OBJECT_FILE_DIR = CMakeFiles/playingCard.dir
+
+build CMakeFiles/playingCard.dir/Suit.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/Suit.cpp || cmake_object_order_depends_target_playingCard
+  DEP_FILE = CMakeFiles/playingCard.dir/Suit.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
+  INCLUDES = -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/playingCard.dir
+  OBJECT_FILE_DIR = CMakeFiles/playingCard.dir
+
+build CMakeFiles/playingCard.dir/Rank.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/Rank.cpp || cmake_object_order_depends_target_playingCard
+  DEP_FILE = CMakeFiles/playingCard.dir/Rank.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
+  INCLUDES = -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/playingCard.dir
+  OBJECT_FILE_DIR = CMakeFiles/playingCard.dir
+
+build CMakeFiles/playingCard.dir/LightCard.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/LightCard.cpp || cmake_object_order_depends_target_playingCard
+  DEP_FILE = CMakeFiles/playingCard.dir/LightCard.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
+  INCLUDES = -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/playingCard.dir
+  OBJECT_FILE_DIR = CMakeFiles/playingCard.dir
+
+build CMakeFiles/playingCard.dir/CardHand.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/CardHand.cpp || cmake_object_order_depends_target_playingCard
+  DEP_FILE = CMakeFiles/playingCard.dir/CardHand.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
+  INCLUDES = -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/playingCard.dir
+  OBJECT_FILE_DIR = CMakeFiles/playingCard.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target playingCard
@@ -75,7 +110,7 @@ build CMakeFiles/playingCard.dir/Game.cpp.o: CXX_COMPILER__playingCard_Debug /Us
 #############################################
 # Link the executable playingCard
 
-build playingCard: CXX_EXECUTABLE_LINKER__playingCard_Debug CMakeFiles/playingCard.dir/main.cpp.o CMakeFiles/playingCard.dir/Card.cpp.o CMakeFiles/playingCard.dir/Game.cpp.o | /usr/local/lib/libsfml-graphics.2.5.1.dylib /usr/local/lib/libsfml-audio.2.5.1.dylib /usr/local/lib/libsfml-network.2.5.1.dylib /usr/local/lib/libsfml-window.2.5.1.dylib /usr/local/lib/libsfml-system.2.5.1.dylib
+build playingCard: CXX_EXECUTABLE_LINKER__playingCard_Debug CMakeFiles/playingCard.dir/main.cpp.o CMakeFiles/playingCard.dir/Card.cpp.o CMakeFiles/playingCard.dir/Game.cpp.o CMakeFiles/playingCard.dir/Deck.cpp.o CMakeFiles/playingCard.dir/Suit.cpp.o CMakeFiles/playingCard.dir/Rank.cpp.o CMakeFiles/playingCard.dir/LightCard.cpp.o CMakeFiles/playingCard.dir/CardHand.cpp.o | /usr/local/lib/libsfml-graphics.2.5.1.dylib /usr/local/lib/libsfml-audio.2.5.1.dylib /usr/local/lib/libsfml-network.2.5.1.dylib /usr/local/lib/libsfml-window.2.5.1.dylib /usr/local/lib/libsfml-system.2.5.1.dylib
   FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  /usr/local/lib/libsfml-graphics.2.5.1.dylib  /usr/local/lib/libsfml-audio.2.5.1.dylib  /usr/local/lib/libsfml-network.2.5.1.dylib  /usr/local/lib/libsfml-window.2.5.1.dylib  /usr/local/lib/libsfml-system.2.5.1.dylib
   OBJECT_DIR = CMakeFiles/playingCard.dir

@@ -6,6 +6,10 @@
 #define PLAYINGCARD_GAME_H
 #include <SFML/Graphics.hpp>
 #include "Card.h"
+#include "Deck.h"
+#include "Suit.h"
+#include "Rank.h"
+#include "suitEnum.h"
 
 class Game {
 private:
