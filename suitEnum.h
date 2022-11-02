@@ -5,6 +5,6 @@
 #ifndef PLAYINGCARD_SUITENUM_H
 #define PLAYINGCARD_SUITENUM_H
 
-enum Suits{Spades, Hearts, Clubs, Diamonds, COUNT_SUITS, EmptySuit};
+enum Suits{Diamonds = 0, Clubs = 1, Hearts = 2, Spades = 3, COUNT_SUITS, EmptySuit};
 
 #endif //PLAYINGCARD_SUITENUM_H

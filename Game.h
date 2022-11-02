@@ -8,6 +8,8 @@
 #include "Card.h"
 #include "Deck.h"
 #include "CardHand.h"
+#include "CardHandScorer.h"
+#include "PokerScore.h"
 #include "Suit.h"
 #include "Rank.h"
 #include "suitEnum.h"

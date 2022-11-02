@@ -15,7 +15,9 @@ private:
 public:
     CardHand();
     void drawCard(const LightCard& card);
+    void sort();
     void print();
+    std::vector<LightCard> getCardHand();
 };
 
 

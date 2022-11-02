@@ -12,18 +12,28 @@ Game::Game()
 
 void Game::run()
 {
-    Card card1(Queen, Clubs, {700, 700});
-    Card card2(Ace, Spades, {500, 300});
-    Card card3(King, Hearts, {1100,1100});
-    Card card4(Jack, Diamonds, {100, 100});
-    Deck deck;
-    deck.shuffleDeck();
-    CardHand ch;
-    for (int i = 0; i < 5; ++i)
-    {
-        ch.drawCard(deck.dealCard());
-    }
-    
+//    Card card1(Queen, Clubs, {700, 700});
+//    Card card2(Ace, Spades, {500, 300});
+//    Card card3(King, Hearts, {1100,1100});
+//    Card card4(Jack, Diamonds, {100, 100});
+      Deck deck;
+      deck.shuffleDeck();
+      CardHand ch;
+      CardHandScorer chs;
+      for (int i = 0; i < 5; ++i)
+        {
+          ch.drawCard(deck.dealCard());
+        }
+      ch.sort();
+      ch.print();
+      chs.scorePokerHand(ch);
+//      std::cout << std::boolalpha << chs.onePair(ch) << std::endl;
+//      std::cout << std::boolalpha << chs.twoPair(ch) << std::endl;
+        std::cout << std::boolalpha << "One Pair: " << chs.onePair(ch) << std::endl;
+        std::cout << std::boolalpha << "Two Pair: " << chs.twoPair(ch) << std::endl;
+        std::cout << std::boolalpha << "Three of a kind : " << chs.threeOfAKind(ch) << std::endl;
+        std::cout << std::boolalpha << "Four of a kind : " << chs.fourOfAKind(ch) << std::endl;
+
 //    while(window.isOpen())
 //    {
 //        sf::Event event;

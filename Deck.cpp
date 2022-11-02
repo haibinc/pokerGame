@@ -7,9 +7,10 @@
 Deck::Deck()
 {
     int deck_Index = 0;
-    for (int i = 0; i < COUNT_RANKS; ++i)
+    //good luck reading this code in the future
+    for (int i = Ace; i < COUNT_RANKS; ++i)
     {
-        for (int j = 0; j < COUNT_SUITS; ++j)
+        for (int j = Diamonds; j < COUNT_SUITS; ++j)
         {
             deck[deck_Index] = LightCard(static_cast<Ranks>(i), static_cast<Suits>(j));
             deck_Index++;
