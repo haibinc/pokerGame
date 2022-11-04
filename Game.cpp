@@ -18,21 +18,28 @@ void Game::run()
 //    Card card4(Jack, Diamonds, {100, 100});
       Deck deck;
       deck.shuffleDeck();
-      CardHand ch;
-      CardHandScorer chs;
+      CardHand ch1;
       for (int i = 0; i < 5; ++i)
-        {
-          ch.drawCard(deck.dealCard());
-        }
-      ch.sort();
-      ch.print();
-      chs.scorePokerHand(ch);
-//      std::cout << std::boolalpha << chs.onePair(ch) << std::endl;
-//      std::cout << std::boolalpha << chs.twoPair(ch) << std::endl;
-        std::cout << std::boolalpha << "One Pair: " << chs.onePair(ch) << std::endl;
-        std::cout << std::boolalpha << "Two Pair: " << chs.twoPair(ch) << std::endl;
-        std::cout << std::boolalpha << "Three of a kind : " << chs.threeOfAKind(ch) << std::endl;
-        std::cout << std::boolalpha << "Four of a kind : " << chs.fourOfAKind(ch) << std::endl;
+      {
+          ch1.drawCard(deck.dealCard());
+      }
+      ch1.sort();
+      ch1.print();
+      PokerScore pokerScorer = CardHandScorer::scorePokerHand(ch1);
+      pokerScorer.counterUpdate();
+      pokerScorer.print();
+
+
+//      chs.scorePokerHand(ch1);
+//        std::cout << std::boolalpha << "One Pair: " << chs.onePair() << std::endl;
+//        std::cout << std::boolalpha << "Two Pair: " << chs.twoPair() << std::endl;
+//        std::cout << std::boolalpha << "Three of a kind: " << chs.threeOfAKind() << std::endl;
+//        std::cout << std::boolalpha << "Four of a kind: " << chs.fourOfAKind() << std::endl;
+//        std::cout << std::boolalpha << "Straight: " << chs.straight() << std::endl;
+//        std::cout << std::boolalpha << "Flush: " << chs.flush() << std::endl;
+//        std::cout << std::boolalpha << "Fullhouse: " << chs.fullHouse() << std::endl;
+//        std::cout << std::boolalpha << "Straight Flush: " << chs.straightFlush() << std::endl;
+//        std::cout << std::boolalpha << "Royal Flush: " << chs.royalFlush() << std::endl;
 
 //    while(window.isOpen())
 //    {

@@ -7,54 +7,83 @@
 int CardHandScorer::duplicateCounter = 0;
 int CardHandScorer::uniqueCounter = 0;
 int CardHandScorer::connectCounter = 0;
+int CardHandScorer::straightCounter = 0;
+int CardHandScorer::flushCounter = 0;
+int CardHandScorer::creativityCounter = 0;
+bool CardHandScorer::threePiece = false;
+bool CardHandScorer::fourPiece = false;
+PokerScore CardHandScorer::pokerScore;
 
 CardHandScorer::CardHandScorer()
 {
 }
 
-int CardHandScorer::scorePokerHand(CardHand ch)
+PokerScore CardHandScorer::scorePokerHand(CardHand ch)
 {
     getDuplicate(ch);
     getUnique(ch);
     getConnect(ch);
-    highCard(ch);
-    onePair(ch);
-    twoPair(ch);
-    threeOfAKind(ch);
-    fourOfAKind(ch);
-    straight(ch);
-    flush(ch);
-    fullHouse(ch);
-    straightFlush(ch);
-    royalFlush(ch);
+    getStraight(ch);
+    getFlush(ch);
+    getRoyalFlush(ch);
+
+    pokerScore += (HIGH_CARD);
+    if(royalFlush())
+    {
+        pokerScore += (ROYAL_FLUSH);
+        pokerScore += (STRAIGHT_FLUSH);
+        pokerScore += (FLUSH);
+        pokerScore += (STRAIGHT);
+    }
+    else if(straightFlush())
+    {
+        pokerScore += (STRAIGHT_FLUSH);
+        pokerScore += (STRAIGHT);
+        pokerScore += (FLUSH);
+    }
+    else if(straight())
+    {
+        pokerScore += (STRAIGHT);
+    }
+    else if(flush())
+    {
+        pokerScore += (FLUSH);
+    }
+
+    if(fourOfAKind())
+    {
+        pokerScore += (FOUR_OF_A_KIND);
+        pokerScore += (THREE_OF_A_KIND);
+        pokerScore += (TWO_PAIR);
+        pokerScore += (ONE_PAIR);
+    }
+    else if(fullHouse())
+    {
+        pokerScore += (THREE_OF_A_KIND);
+        pokerScore += (TWO_PAIR);
+        pokerScore += (ONE_PAIR);
+    }
+    else if(threeOfAKind())
+    {
+        pokerScore += (THREE_OF_A_KIND);
+        pokerScore += (ONE_PAIR);
+    }
+    else if(twoPair())
+    {
+        pokerScore += (TWO_PAIR);
+        pokerScore += (ONE_PAIR);
+    }
+    else if(onePair())
+    {
+        pokerScore += (ONE_PAIR);
+    }
+
+    return pokerScore;
 }
 
-bool CardHandScorer::royalFlush(CardHand ch) {
-    return false;
-}
-
-bool CardHandScorer::straightFlush(CardHand ch) {
-    return false;
-}
-
-bool CardHandScorer::fullHouse(CardHand ch) {
-    return false;
-}
-
-bool CardHandScorer::flush(CardHand ch) {
-    return false;
-}
-
-bool CardHandScorer::straight(CardHand ch)
+bool CardHandScorer::royalFlush()
 {
-    
-    return false;
-}
-
-
-bool CardHandScorer::fourOfAKind(CardHand ch)
-{
-    if(uniqueCounter == 1 && duplicateCounter == 3)
+    if(creativityCounter == 4 && flush())
     {
         return true;
     }
@@ -64,9 +93,9 @@ bool CardHandScorer::fourOfAKind(CardHand ch)
     }
 }
 
-bool CardHandScorer::threeOfAKind(CardHand ch)
+bool CardHandScorer::straightFlush()
 {
-    if(connectCounter == 2)
+    if(straight() && flush())
     {
         return true;
     }
@@ -76,9 +105,20 @@ bool CardHandScorer::threeOfAKind(CardHand ch)
     }
 }
 
-bool CardHandScorer::twoPair(CardHand ch)
+bool CardHandScorer::fullHouse()
 {
-    if(uniqueCounter <= 2)
+    if(threeOfAKind() && twoPair() && !fourOfAKind())
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+bool CardHandScorer::flush()
+{
+    if(flushCounter == 4)
     {
         return true;
     }
@@ -88,7 +128,56 @@ bool CardHandScorer::twoPair(CardHand ch)
     }
 }
 
-bool CardHandScorer::onePair(CardHand ch)
+bool CardHandScorer::straight()
+{
+    if(straightCounter == 4)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+
+bool CardHandScorer::fourOfAKind()
+{
+    if(fourPiece)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool CardHandScorer::threeOfAKind()
+{
+    if(threePiece)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool CardHandScorer::twoPair()
+{
+    if((uniqueCounter <= 2 && connectCounter != 2) || fourOfAKind())
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool CardHandScorer::onePair()
 {
     if(uniqueCounter <= 3)
     {
@@ -101,7 +190,7 @@ bool CardHandScorer::onePair(CardHand ch)
 
 }
 
-bool CardHandScorer::highCard(CardHand ch)
+bool CardHandScorer::highCard()
 {
    return true;
 }
@@ -132,20 +221,69 @@ void CardHandScorer::getConnect(CardHand ch)
 {
     for (int i = 0; i < ch.getCardHand().size()-1; ++i)
     {
-        for (int j = i+1; j < ch.getCardHand().size()-1; ++j)
+        for (int j = i+1; j < ch.getCardHand().size(); ++j)
         {
             if(ch.getCardHand()[i].getEnumRank() == ch.getCardHand()[j].getEnumRank())
             {
                 connectCounter++;
                 if(connectCounter == 2)
                 {
-                    return;
+                    threePiece = true;
+                }
+                else if(connectCounter == 3)
+                {
+                    fourPiece = true;
                 }
             }
             else
             {
                 connectCounter = 0;
                 break;
+            }
+        }
+    }
+}
+
+void CardHandScorer::getStraight(CardHand ch)
+{
+    for (int i = 0; i < ch.getCardHand().size()-1; ++i)
+    {
+        if(ch.getCardHand()[i].getEnumRank() + 1 == ch.getCardHand()[i+1].getEnumRank())
+        {
+            straightCounter++;
+        }
+        else
+        {
+            return;
+        }
+    }
+}
+
+void CardHandScorer::getFlush(CardHand ch)
+{
+    for (int i = 0; i < ch.getCardHand().size()-1; ++i)
+    {
+        if(ch.getCardHand()[i].getEnumSuit() == ch.getCardHand()[i+1].getEnumSuit())
+        {
+            flushCounter++;
+        }
+        else
+        {
+            return;
+        }
+    }
+}
+
+//0 creativity
+void CardHandScorer::getRoyalFlush(CardHand ch)
+{
+    if(ch.getCardHand()[0].getEnumRank() == Ace)
+    {
+        for (int i = 0; i < ch.getCardHand().size()-1; ++i)
+        {
+            if((ch.getCardHand()[0].getEnumRank() + 9 + i) == ch.getCardHand()[i+1].getEnumRank())
+            {
+                creativityCounter++;
             }
         }
     }

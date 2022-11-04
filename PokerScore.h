@@ -4,18 +4,23 @@
 
 #ifndef PLAYINGCARD_POKERSCORE_H
 #define PLAYINGCARD_POKERSCORE_H
+#include <iostream>
+#include <vector>
 #include "Scores.h"
-#include "CardHandScorer.h"
 
 class PokerScore
 {
 private:
     std::vector<Scores> scores;
+    int array_Counter[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     int index;
 public:
     PokerScore();
     void operator+=(const Scores& scores);
+    void counterUpdate();
+    void print();
     friend bool operator==(const PokerScore& p, Scores score);
+    int getSize();
     Scores& operator[](unsigned int index);
 };
 

@@ -8,8 +8,6 @@
 #include <iostream>
 #include <time.h>
 #include "LightCard.h"
-#include "suitEnum.h"
-#include "rankEnum.h"
 
 class Deck
 {
