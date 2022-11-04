@@ -59,6 +59,7 @@ PokerScore CardHandScorer::scorePokerHand(CardHand ch)
     }
     else if(fullHouse())
     {
+        pokerScore += (FULL_HOUSE);
         pokerScore += (THREE_OF_A_KIND);
         pokerScore += (TWO_PAIR);
         pokerScore += (ONE_PAIR);
@@ -197,6 +198,7 @@ bool CardHandScorer::highCard()
 
 void CardHandScorer::getDuplicate(CardHand ch)
 {
+    duplicateCounter = 0;
     for (int i = 0; i < ch.getCardHand().size()-1; ++i)
     {
         if (ch.getCardHand()[i].getEnumRank() == ch.getCardHand()[i+1].getEnumRank())
@@ -208,6 +210,7 @@ void CardHandScorer::getDuplicate(CardHand ch)
 
 void CardHandScorer::getUnique(CardHand ch)
 {
+    uniqueCounter = 0;
     for (int i = 0; i < ch.getCardHand().size()-1; ++i)
     {
         if(ch.getCardHand()[i].getEnumRank() != ch.getCardHand()[i+1].getEnumRank())
@@ -219,6 +222,9 @@ void CardHandScorer::getUnique(CardHand ch)
 
 void CardHandScorer::getConnect(CardHand ch)
 {
+    threePiece = false;
+    fourPiece = false;
+    connectCounter = 0;
     for (int i = 0; i < ch.getCardHand().size()-1; ++i)
     {
         for (int j = i+1; j < ch.getCardHand().size(); ++j)
@@ -246,6 +252,7 @@ void CardHandScorer::getConnect(CardHand ch)
 
 void CardHandScorer::getStraight(CardHand ch)
 {
+    straightCounter = 0;
     for (int i = 0; i < ch.getCardHand().size()-1; ++i)
     {
         if(ch.getCardHand()[i].getEnumRank() + 1 == ch.getCardHand()[i+1].getEnumRank())
@@ -261,6 +268,7 @@ void CardHandScorer::getStraight(CardHand ch)
 
 void CardHandScorer::getFlush(CardHand ch)
 {
+    flushCounter = 0;
     for (int i = 0; i < ch.getCardHand().size()-1; ++i)
     {
         if(ch.getCardHand()[i].getEnumSuit() == ch.getCardHand()[i+1].getEnumSuit())
@@ -277,6 +285,7 @@ void CardHandScorer::getFlush(CardHand ch)
 //0 creativity
 void CardHandScorer::getRoyalFlush(CardHand ch)
 {
+    creativityCounter = 0;
     if(ch.getCardHand()[0].getEnumRank() == Ace)
     {
         for (int i = 0; i < ch.getCardHand().size()-1; ++i)

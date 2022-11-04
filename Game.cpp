@@ -17,18 +17,34 @@ void Game::run()
 //    Card card3(King, Hearts, {1100,1100});
 //    Card card4(Jack, Diamonds, {100, 100});
       Deck deck;
-      deck.shuffleDeck();
-      CardHand ch1;
-      for (int i = 0; i < 5; ++i)
+      srand(time(0));
+      int counter = 0;
+      while(true)
       {
-          ch1.drawCard(deck.dealCard());
+          CardHand ch1;
+          for (int i = 0; i < 5; ++i)
+          {
+              ch1.drawCard(deck.dealCard());
+              if(deck.empty())
+              {
+                  deck.createDeck();
+                  deck.shuffleDeck();
+              }
+          }
+          ch1.sort();
+          PokerScore pokerScorer = CardHandScorer::scorePokerHand(ch1);
+          pokerScorer.counterUpdate();
+          if(pokerScorer == ROYAL_FLUSH)
+          {
+              break;
+          }
+          else
+          {
+              counter++;
+          }
+          std::cout << "----------------------------------\n";
+          pokerScorer.print();
       }
-      ch1.sort();
-      ch1.print();
-      PokerScore pokerScorer = CardHandScorer::scorePokerHand(ch1);
-      pokerScorer.counterUpdate();
-      pokerScorer.print();
-
 
 //      chs.scorePokerHand(ch1);
 //        std::cout << std::boolalpha << "One Pair: " << chs.onePair() << std::endl;

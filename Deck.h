@@ -21,6 +21,7 @@ public:
     LightCard getCardAt(int index);
     bool empty();
     void shuffleDeck();
+    void createDeck();
     void printDeck();
     friend std::ostream& operator<<(std::ostream& out, const LightCard& card);
     friend bool operator==(const LightCard& lhs, const LightCard& rhs);

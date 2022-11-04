@@ -6,8 +6,14 @@
 
 Deck::Deck()
 {
-    int deck_Index = 0;
     //good luck reading this code in the future
+    createDeck();
+    shuffleDeck();
+}
+
+void Deck::createDeck()
+{
+    int deck_Index = 0;
     for (int i = Ace; i < COUNT_RANKS; ++i)
     {
         for (int j = Diamonds; j < COUNT_SUITS; ++j)
@@ -16,6 +22,7 @@ Deck::Deck()
             deck_Index++;
         }
     }
+    shuffleDeck();
 }
 
 std::ostream& operator<<(std::ostream& out, const LightCard& card)
@@ -45,7 +52,6 @@ void Deck::printDeck()
 
 void Deck::shuffleDeck()
 {
-    srand(time(0));
     LightCard temp[52];
     for (int i = 0; i < deck_Size; ++i)
     {
@@ -67,16 +73,21 @@ LightCard Deck::dealCard()
 
 bool Deck::empty()
 {
-    for (int i = 0; i < deck_Size; ++i)
+//    for (int i = 0; i < deck_Size; ++i)
+//    {
+//        if(deck[i] == LightCard(EmptyRank, EmptySuit))
+//        {
+//            continue;
+//        }
+//        else
+//        {
+//            return false;
+//        }
+//    }
+    if(cardIndex != 52)
     {
-        if(deck[i] == LightCard(EmptyRank, EmptySuit))
-        {
-            continue;
-        }
-        else
-        {
-            return false;
-        }
+        return false;
     }
+    cardIndex = 0;
     return true;
 }
