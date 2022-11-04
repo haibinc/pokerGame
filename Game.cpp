@@ -17,9 +17,8 @@ void Game::run()
 //    Card card3(King, Hearts, {1100,1100});
 //    Card card4(Jack, Diamonds, {100, 100});
       Deck deck;
-      srand(time(0));
       int counter = 0;
-      while(true)
+      while(counter < 5)
       {
           CardHand ch1;
           for (int i = 0; i < 5; ++i)
@@ -33,16 +32,18 @@ void Game::run()
           }
           ch1.sort();
           PokerScore pokerScorer = CardHandScorer::scorePokerHand(ch1);
-          pokerScorer.counterUpdate();
-          if(pokerScorer == ROYAL_FLUSH)
-          {
-              break;
-          }
-          else
-          {
-              counter++;
-          }
+//          if(pokerScorer == ROYAL_FLUSH)
+//          {
+//              break;
+//          }
+//          else
+//          {
+//              counter++;
+//          }
+            counter++;
           std::cout << "----------------------------------\n";
+          ch1.print();
+          pokerScorer.counterUpdate();
           pokerScorer.print();
       }
 
