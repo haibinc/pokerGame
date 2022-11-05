@@ -19,7 +19,7 @@ private:
     sf::Font font;
     sf::Sprite suitTop, suitBottom;
     sf::Texture texture;
-    sf::Vector2f cardSize{240.f, 300.f};
+    sf::Vector2f cardSize{150.f, 200.f};
     sf::Vector2f cardPosition {0,0};
 public:
     Card();

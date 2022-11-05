@@ -39,7 +39,6 @@ void PokerScore::counterUpdate()
 {
     for (int i = 0; i < scores.size(); ++i)
     {
-        std::cout << scores[i] << std::endl;
         if(scores[i] == 9)
         {
             array_Counter[9]++;

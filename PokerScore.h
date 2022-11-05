@@ -12,7 +12,7 @@ class PokerScore
 {
 private:
     std::vector<Scores> scores;
-    int array_Counter[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int array_Counter[10];
     int index;
 public:
     PokerScore();

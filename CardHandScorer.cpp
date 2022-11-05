@@ -108,7 +108,7 @@ bool CardHandScorer::straightFlush()
 
 bool CardHandScorer::fullHouse()
 {
-    if(threeOfAKind() && twoPair() && !fourOfAKind())
+    if(threeOfAKind() && uniqueCounter == 1 && !fourOfAKind())
     {
         return true;
     }
@@ -168,7 +168,7 @@ bool CardHandScorer::threeOfAKind()
 
 bool CardHandScorer::twoPair()
 {
-    if((uniqueCounter <= 2 && connectCounter != 2) || fourOfAKind())
+    if((uniqueCounter <= 2 && threePiece == false) || fourOfAKind())
     {
         return true;
     }
