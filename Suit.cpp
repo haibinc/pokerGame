@@ -3,32 +3,41 @@
 //
 #include "Suit.h"
 
+sf::Texture Suit::Spades;
+sf::Texture Suit::Clubs;
+sf::Texture Suit::Diamonds;
+sf::Texture Suit::Hearts;
+
 Suit::Suit()
 {
 }
 
 Suit::Suit(Suits enumSuit)
-: enumSuit(enumSuit)
+:enumSuit(enumSuit)
 {
-
+    getTexture();
 }
 
-std::string Suit::toString() const
+sf::Texture& Suit::getTexture() const
 {
     switch(enumSuit)
     {
-        case Hearts:
-            return "Hearts.png";
-        case Spades:
-            return "Spades.png";
-        case Clubs:
-            return "Clubs.png";
-        case Diamonds:
-            return "Diamonds.png";
+        case Suits::Hearts:
+            Hearts.loadFromFile("Hearts.png");
+            return Hearts;
+        case Suits::Spades:
+            Spades.loadFromFile("Spades.png");
+            return Spades;
+        case Suits::Clubs:
+            Clubs.loadFromFile("Clubs.png");
+            return Clubs;
+        case Suits::Diamonds:
+            Diamonds.loadFromFile("Diamonds.png");
+            return Diamonds;
     }
 }
 
-Suits Suit::getSuits()
+Suits Suit::getSuits() const
 {
     return enumSuit;
 }

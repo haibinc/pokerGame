@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/haibin/CLionProjects/playingCard/cmake-build-debug"
+			"value" : "/Users/haibin/CLionProjects/pokerGame optimized/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/haibin/CLionProjects/playingCard"
+			"value" : "/Users/haibin/CLionProjects/pokerGame optimized"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/haibin/CLionProjects/playingCard/cmake-build-debug"
+			"value" : "/Users/haibin/CLionProjects/pokerGame optimized/cmake-build-debug"
 		},
 		{
 			"name" : "playingCard_IS_TOP_LEVEL",
@@ -1135,7 +1135,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/haibin/CLionProjects/playingCard"
+			"value" : "/Users/haibin/CLionProjects/pokerGame optimized"
 		}
 	],
 	"kind" : "cache",

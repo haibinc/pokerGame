@@ -52,7 +52,6 @@ void Deck::printDeck()
 
 void Deck::shuffleDeck()
 {
-    srand(time(0));
     LightCard temp[52];
     for (int i = 0; i < deck_Size; ++i)
     {

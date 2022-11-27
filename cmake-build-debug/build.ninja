@@ -36,7 +36,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/haibin/CLionProjects/playingCard/cmake-build-debug/
+cmake_ninja_workdir = /Users/haibin/CLionProjects/pokerGame$ optimized/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target playingCard
 
@@ -46,7 +46,7 @@ cmake_ninja_workdir = /Users/haibin/CLionProjects/playingCard/cmake-build-debug/
 
 build cmake_object_order_depends_target_playingCard: phony || CMakeFiles/playingCard.dir
 
-build CMakeFiles/playingCard.dir/main.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/main.cpp || cmake_object_order_depends_target_playingCard
+build CMakeFiles/playingCard.dir/main.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/pokerGame$ optimized/main.cpp || cmake_object_order_depends_target_playingCard
   DEP_FILE = CMakeFiles/playingCard.dir/main.cpp.o.d
   FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   INCLUDES = -isystem /usr/local/include
@@ -55,7 +55,7 @@ build CMakeFiles/playingCard.dir/main.cpp.o: CXX_COMPILER__playingCard_Debug /Us
   TARGET_COMPILE_PDB = CMakeFiles/playingCard.dir/
   TARGET_PDB = playingCard.pdb
 
-build CMakeFiles/playingCard.dir/Card.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/Card.cpp || cmake_object_order_depends_target_playingCard
+build CMakeFiles/playingCard.dir/Card.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/pokerGame$ optimized/Card.cpp || cmake_object_order_depends_target_playingCard
   DEP_FILE = CMakeFiles/playingCard.dir/Card.cpp.o.d
   FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   INCLUDES = -isystem /usr/local/include
@@ -64,7 +64,7 @@ build CMakeFiles/playingCard.dir/Card.cpp.o: CXX_COMPILER__playingCard_Debug /Us
   TARGET_COMPILE_PDB = CMakeFiles/playingCard.dir/
   TARGET_PDB = playingCard.pdb
 
-build CMakeFiles/playingCard.dir/Game.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/Game.cpp || cmake_object_order_depends_target_playingCard
+build CMakeFiles/playingCard.dir/Game.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/pokerGame$ optimized/Game.cpp || cmake_object_order_depends_target_playingCard
   DEP_FILE = CMakeFiles/playingCard.dir/Game.cpp.o.d
   FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   INCLUDES = -isystem /usr/local/include
@@ -73,7 +73,7 @@ build CMakeFiles/playingCard.dir/Game.cpp.o: CXX_COMPILER__playingCard_Debug /Us
   TARGET_COMPILE_PDB = CMakeFiles/playingCard.dir/
   TARGET_PDB = playingCard.pdb
 
-build CMakeFiles/playingCard.dir/Deck.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/Deck.cpp || cmake_object_order_depends_target_playingCard
+build CMakeFiles/playingCard.dir/Deck.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/pokerGame$ optimized/Deck.cpp || cmake_object_order_depends_target_playingCard
   DEP_FILE = CMakeFiles/playingCard.dir/Deck.cpp.o.d
   FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   INCLUDES = -isystem /usr/local/include
@@ -82,7 +82,7 @@ build CMakeFiles/playingCard.dir/Deck.cpp.o: CXX_COMPILER__playingCard_Debug /Us
   TARGET_COMPILE_PDB = CMakeFiles/playingCard.dir/
   TARGET_PDB = playingCard.pdb
 
-build CMakeFiles/playingCard.dir/Suit.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/Suit.cpp || cmake_object_order_depends_target_playingCard
+build CMakeFiles/playingCard.dir/Suit.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/pokerGame$ optimized/Suit.cpp || cmake_object_order_depends_target_playingCard
   DEP_FILE = CMakeFiles/playingCard.dir/Suit.cpp.o.d
   FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   INCLUDES = -isystem /usr/local/include
@@ -91,7 +91,7 @@ build CMakeFiles/playingCard.dir/Suit.cpp.o: CXX_COMPILER__playingCard_Debug /Us
   TARGET_COMPILE_PDB = CMakeFiles/playingCard.dir/
   TARGET_PDB = playingCard.pdb
 
-build CMakeFiles/playingCard.dir/Rank.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/Rank.cpp || cmake_object_order_depends_target_playingCard
+build CMakeFiles/playingCard.dir/Rank.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/pokerGame$ optimized/Rank.cpp || cmake_object_order_depends_target_playingCard
   DEP_FILE = CMakeFiles/playingCard.dir/Rank.cpp.o.d
   FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   INCLUDES = -isystem /usr/local/include
@@ -100,7 +100,7 @@ build CMakeFiles/playingCard.dir/Rank.cpp.o: CXX_COMPILER__playingCard_Debug /Us
   TARGET_COMPILE_PDB = CMakeFiles/playingCard.dir/
   TARGET_PDB = playingCard.pdb
 
-build CMakeFiles/playingCard.dir/LightCard.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/LightCard.cpp || cmake_object_order_depends_target_playingCard
+build CMakeFiles/playingCard.dir/LightCard.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/pokerGame$ optimized/LightCard.cpp || cmake_object_order_depends_target_playingCard
   DEP_FILE = CMakeFiles/playingCard.dir/LightCard.cpp.o.d
   FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   INCLUDES = -isystem /usr/local/include
@@ -109,7 +109,7 @@ build CMakeFiles/playingCard.dir/LightCard.cpp.o: CXX_COMPILER__playingCard_Debu
   TARGET_COMPILE_PDB = CMakeFiles/playingCard.dir/
   TARGET_PDB = playingCard.pdb
 
-build CMakeFiles/playingCard.dir/CardHand.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/CardHand.cpp || cmake_object_order_depends_target_playingCard
+build CMakeFiles/playingCard.dir/CardHand.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/pokerGame$ optimized/CardHand.cpp || cmake_object_order_depends_target_playingCard
   DEP_FILE = CMakeFiles/playingCard.dir/CardHand.cpp.o.d
   FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   INCLUDES = -isystem /usr/local/include
@@ -118,7 +118,7 @@ build CMakeFiles/playingCard.dir/CardHand.cpp.o: CXX_COMPILER__playingCard_Debug
   TARGET_COMPILE_PDB = CMakeFiles/playingCard.dir/
   TARGET_PDB = playingCard.pdb
 
-build CMakeFiles/playingCard.dir/CardHandScorer.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/CardHandScorer.cpp || cmake_object_order_depends_target_playingCard
+build CMakeFiles/playingCard.dir/CardHandScorer.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/pokerGame$ optimized/CardHandScorer.cpp || cmake_object_order_depends_target_playingCard
   DEP_FILE = CMakeFiles/playingCard.dir/CardHandScorer.cpp.o.d
   FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   INCLUDES = -isystem /usr/local/include
@@ -127,7 +127,7 @@ build CMakeFiles/playingCard.dir/CardHandScorer.cpp.o: CXX_COMPILER__playingCard
   TARGET_COMPILE_PDB = CMakeFiles/playingCard.dir/
   TARGET_PDB = playingCard.pdb
 
-build CMakeFiles/playingCard.dir/PokerScore.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/playingCard/PokerScore.cpp || cmake_object_order_depends_target_playingCard
+build CMakeFiles/playingCard.dir/PokerScore.cpp.o: CXX_COMPILER__playingCard_Debug /Users/haibin/CLionProjects/pokerGame$ optimized/PokerScore.cpp || cmake_object_order_depends_target_playingCard
   DEP_FILE = CMakeFiles/playingCard.dir/PokerScore.cpp.o.d
   FLAGS = -std=c++11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   INCLUDES = -isystem /usr/local/include
@@ -159,7 +159,7 @@ build playingCard: CXX_EXECUTABLE_LINKER__playingCard_Debug CMakeFiles/playingCa
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/haibin/CLionProjects/playingCard/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd "/Users/haibin/CLionProjects/pokerGame optimized/cmake-build-debug" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -170,7 +170,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/haibin/CLionProjects/playingCard/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/haibin/CLionProjects/playingCard -B/Users/haibin/CLionProjects/playingCard/cmake-build-debug
+  COMMAND = cd "/Users/haibin/CLionProjects/pokerGame optimized/cmake-build-debug" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Users/haibin/CLionProjects/pokerGame optimized" -B"/Users/haibin/CLionProjects/pokerGame optimized/cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -186,7 +186,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /Users/haibin/CLionProjects/playingCard/cmake-build-debug
+# Folder: /Users/haibin/CLionProjects/pokerGame optimized/cmake-build-debug
 
 build all: phony playingCard
 

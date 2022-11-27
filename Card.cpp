@@ -27,7 +27,7 @@ void Card::init(const Rank& rank, const Suit& suit, sf::Vector2f cardPosition)
     if (!font.loadFromFile("MontereyFLF-Bold.ttf")) {
         throw ("yer");
     }
-    if(suit.toString() == "Spades.png" || suit.toString() == "Clubs.png")
+    if(suit.getSuits() == Spades || suit.getSuits() == Clubs)
     {
         faceValue.setFillColor(sf::Color::Black);
     }
@@ -40,11 +40,10 @@ void Card::init(const Rank& rank, const Suit& suit, sf::Vector2f cardPosition)
     faceValue.setStyle(sf::Text::Bold | sf::Text::Underlined);
     faceValue.setPosition(getGlobalBounds().left + (getGlobalBounds().width / 2 - 50), getGlobalBounds().top + (getGlobalBounds().height / 2) - 50);
     faceValue.setString(rank.toString());
-    texture.loadFromFile(suit.toString());
-    suitTop.setTexture(texture);
+    suitTop.setTexture(suit.getTexture());
     suitTop.setScale(0.10, 0.10);
     suitTop.setPosition(getGlobalBounds().left, getGlobalBounds().top);
-    suitBottom.setTexture(texture);
+    suitBottom.setTexture(suit.getTexture());
     suitBottom.setScale(0.10, 0.10);
     suitBottom.rotate(180);
     suitBottom.setPosition(getGlobalBounds().width, getGlobalBounds().height);

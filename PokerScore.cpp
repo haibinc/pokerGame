@@ -4,6 +4,8 @@
 
 #include "PokerScore.h"
 
+int PokerScore::array_Counter[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 7 0};
+
 PokerScore::PokerScore()
 {
 }

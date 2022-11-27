@@ -5,6 +5,7 @@
 #ifndef PLAYINGCARD_SUIT_H
 #define PLAYINGCARD_SUIT_H
 #include "iostream"
+#include "SFML/Graphics.hpp"
 #include "suitEnum.h"
 
 class Suit {
@@ -12,10 +13,11 @@ public:
     Suit();
     Suit(Suits enumSuit);
     void setSuits(Suits enumSuit);
-    std::string toString() const;
-    Suits getSuits();
+    sf::Texture& getTexture() const;
+    Suits getSuits() const;
 private:
     Suits enumSuit;
+    static sf::Texture Spades, Clubs, Diamonds, Hearts;
 };
 
 

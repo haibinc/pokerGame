@@ -12,7 +12,6 @@ int CardHandScorer::flushCounter = 0;
 int CardHandScorer::creativityCounter = 0;
 bool CardHandScorer::threePiece = false;
 bool CardHandScorer::fourPiece = false;
-PokerScore CardHandScorer::pokerScore;
 
 CardHandScorer::CardHandScorer()
 {
@@ -20,6 +19,7 @@ CardHandScorer::CardHandScorer()
 
 PokerScore CardHandScorer::scorePokerHand(CardHand ch)
 {
+    PokerScore pokerScore;
     getDuplicate(ch);
     getUnique(ch);
     getConnect(ch);
@@ -144,7 +144,7 @@ bool CardHandScorer::straight()
 
 bool CardHandScorer::fourOfAKind()
 {
-    if(fourPiece)
+    if(fourPiece && uniqueCounter <= 1)
     {
         return true;
     }

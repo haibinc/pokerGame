@@ -1,3 +1,3 @@
-/Users/haibin/CLionProjects/playingCard/cmake-build-debug/CMakeFiles/playingCard.dir
-/Users/haibin/CLionProjects/playingCard/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/haibin/CLionProjects/playingCard/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/haibin/CLionProjects/pokerGame optimized/cmake-build-debug/CMakeFiles/playingCard.dir
+/Users/haibin/CLionProjects/pokerGame optimized/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/haibin/CLionProjects/pokerGame optimized/cmake-build-debug/CMakeFiles/rebuild_cache.dir

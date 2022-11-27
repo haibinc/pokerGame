@@ -18,7 +18,6 @@ private:
     static int creativityCounter;
     static bool threePiece;
     static bool fourPiece;
-    static PokerScore pokerScore;
 public:
     CardHandScorer();
     static PokerScore scorePokerHand(CardHand ch);

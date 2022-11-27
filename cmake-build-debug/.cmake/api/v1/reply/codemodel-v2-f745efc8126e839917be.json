@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/haibin/CLionProjects/playingCard/cmake-build-debug",
-		"source" : "/Users/haibin/CLionProjects/playingCard"
+		"build" : "/Users/haibin/CLionProjects/pokerGame optimized/cmake-build-debug",
+		"source" : "/Users/haibin/CLionProjects/pokerGame optimized"
 	},
 	"version" : 
 	{
